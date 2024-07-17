@@ -1,7 +1,5 @@
 # -*- coding:utf-8 -*-
-
 import math
-from mylib import *
 
 
 def _gcd_Euclidean_2(a: int, b: int) -> int:

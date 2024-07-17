@@ -1,22 +1,26 @@
-from setuptools import setup, find_packages
+import setuptools
 
-VERSION = '0.0.1' 
+VERSION = '0.0.2'
 DESCRIPTION = 'Personal library'
-LONG_DESCRIPTION = 'A collection of useful methods from personal use'
+with open("README.md", "r", encoding="utf-8") as fh:
+    LONG_DESCRIPTION = fh.read()
 
-setup(
-        name="mylib66", 
+with open("requirements.txt", "r", encoding="utf-8") as fh:
+    REQUIREMENTS = fh.read()
+
+setuptools.setup(
+        name="mylib66",
         version=VERSION,
         author="Chazz Yu",
         author_email="<cklibrary2@qq.com>",
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
-        packages=find_packages(),
-        install_requires=['matplotlib'],
-        url="https://github.com/Chazz0606/mylib66",
-        
+        long_description_content_type="text/markdown",
+        packages=setuptools.find_packages(),
+        install_requires=REQUIREMENTS,
+        url="https://github.com/xziyu6/mylib66.git",
         keywords=['python', 'personal'],
-        classifiers= [
+        classifiers=[
             "Development Status :: 3 - Alpha",
             "Intended Audience :: Developers",
             "Programming Language :: Python :: 2",
