@@ -15,13 +15,12 @@ jobs:
       uses: actions/setup-python@65d7f2d534ac1bc67fcd62888c5f4f3d2cb2b236
       with:
         python-version: '3.x'
+    - name: Install Poetry
+      uses: snok/install-poetry@93ada01c735cc8a383ce0ce2ae205a21c415379b
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install poetry
         poetry install --no-root --only=main
-    - name: Install Poetry
-      uses: snok/install-poetry@93ada01c735cc8a383ce0ce2ae205a21c415379b
     - name: Build package
       run: poetry build
     - name: Publish package to Test PyPI
