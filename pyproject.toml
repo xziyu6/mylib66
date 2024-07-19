@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mylib66"
-version = "0.1.0"
+version = "0.1.1"
 description = "Personal library"
 authors = ["Chazz Yu"]
 license = "MIT"
@@ -12,9 +12,6 @@ keywords = ['python', 'personal']
 python = "^3.12"
 matplotlib = "^3.9.1"
 numpy = "^2.0.0"
-
-[tool.poetry.group.dev.dependencies]
-setuptools = "^71.0.3"
 
 [build-system]
 requires = ["poetry-core"]
