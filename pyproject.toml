@@ -13,6 +13,14 @@ python = "^3.12"
 matplotlib = "^3.9.1"
 numpy = "^2.0.0"
 
+[tool.poetry.group.dev.dependencies]
+twine = "^5.1.1"
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
+priority = "supplemental"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
